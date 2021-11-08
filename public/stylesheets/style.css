@@ -16,7 +16,41 @@ html {
 :root {
     font-size: 62.5%
 }
-
+head{
+  position: fixed;
+}
+.header-div{
+  display: grid;
+  grid-template-areas: " h1 ";
+  /* position: absolute; */
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+  width: 192px;
+  height: 192px;
+  display: inline-block;
+  background: url(/public/images/pager_favicon/android-chrome-192x192.png);
+}
+.navbar {
+  background-color: aquamarine;
+  font-size: 1.6rem;
+  height: 100vh;
+  width: 10rem;
+  position: fixed;
+}
+.nav-ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-list:last-child{
+  margin-top: auto;
+}
 body {
   background: hsla(270, 98%, 60%, 1);
 
@@ -29,42 +63,32 @@ body {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9835FD", endColorstr="#00EEAD", GradientType=1 );
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
 }
 
-.navbar {
-  font-size: 1.6rem;
-  height: 100vh;
-  position: fixed;
-}
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  margin-left: 5rem;
+  flex-direction: row;
+  margin-left: 10rem;
 }
 
 h1 {
   font-size: 3.6rem;
 }
-img{
-  border-radius: 50%;
+
+.section-1{
+  width: 50%;
+  height: 100vh;
+  background-color: aquamarine;
+  margin-left: 5px;
 }
-.header{
-  display: grid;
-  justify-content: center;
-  
-}
-/* #siwg-image,
-button.siwg{
-  display: none;
-} */
-.nav-ul{
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.section-2{
+  width: 50%;
+  height: 100vh;
+  background-color: aquamarine;
+  margin-left: 5px;
 }

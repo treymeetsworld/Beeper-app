@@ -40,3 +40,10 @@
   position: absolute;
   width: 1px; 
 }
+/* h1::before{
+  content: '';
+  background: url(/images/pager_favicon/android-chrome-192x192.png);
+  width: 192px;
+  height: 192px;
+  display: block;
+} */

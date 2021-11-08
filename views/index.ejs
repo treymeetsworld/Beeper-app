@@ -9,14 +9,9 @@
     </button>
     <% } %>
   </a>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img 
-        src="<%= user.profile.avatar %>" 
-        alt="<%= user.profile.name %> avatar"
-      >
-    </div>
-  <% } %>
+  <% if (user) { %>
+  <section class="section-1"></section>
+  <section class="section-2"></section>
 </main>
-
+<% } %>
 <%- include('./partials/footer') %>
