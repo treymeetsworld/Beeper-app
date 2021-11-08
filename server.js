@@ -58,8 +58,8 @@ app.use(passport.session())
 
 // router middleware
 app.use('/', indexRouter)
+app.use('/posts', postsRouter)
 app.use('/auth', authRouter)
-app.use('/', postsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
