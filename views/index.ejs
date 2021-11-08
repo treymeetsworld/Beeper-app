@@ -10,8 +10,35 @@
     <% } %>
   </a>
   <% if (user) { %>
-  <section class="section-1"></section>
-  <section class="section-2"></section>
+  <section class="section-1">
+    <% if (user?.profile.avatar) { %>
+      <div>
+        <img 
+          src="<%= user.profile.avatar %>" 
+          alt="<%= user.profile.name %> avatar"
+        >
+        <form action="POST" method="post">
+          <input type="text">
+          <button type="submit">New Post</button>
+        </form>
+      </div>
+    <% } %> 
+  </section>
+  <section class="section-2">
+
+  </section>
 </main>
 <% } %>
 <%- include('./partials/footer') %>
+<form
+        action=""
+        method=""
+        class=""
+        >
+        <input
+          type="text"
+          name="text"/>
+        <button type="submit" class="btn">
+          Add Fact
+        </button>
+      </form>
