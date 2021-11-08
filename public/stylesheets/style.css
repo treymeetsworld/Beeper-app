@@ -22,7 +22,11 @@ head{
 .header-div{
   display: grid;
   grid-template-areas: " h1 ";
-  background: yellow;
+  position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+    background: #551a8b;
 }
 
 .header{
@@ -86,13 +90,16 @@ h1 {
   height: 100vw;
   background-color: aquamarine;
   margin-left: 5px;
+  margin-top: 9rem;
 }
 .section-2{
   width: 50%;
   height: 100vw;
   background-color: aquamarine;
   margin-left: 5px;
+  margin-top: 9rem;
 }
+
 .logo{
   height: 96px;
   width: 96px;
