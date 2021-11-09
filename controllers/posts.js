@@ -23,8 +23,17 @@ function create(req,res){
   })
 }
 
+function show(req,res){
+  Post.findById(req.params.id, function (err,post){
+    res.render('posts/show',{
+      post,
+    })
+  })
+}
+
 export{
   index,
   create,
   newPost as new,
+  show,
 }
