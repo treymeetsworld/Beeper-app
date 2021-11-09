@@ -1,5 +1,6 @@
 import { Post } from '../models/posts.js'
 import { Profile } from '../models/profile.js'
+import { User } from '../models/user.js'
 
 function index(req,res){
   Post.find({}, function(error,posts){
@@ -19,7 +20,7 @@ function create(req,res){
   post.save(function(err){
     if (err) return res.redirect('/posts')
     res.render('posts/index',{
-      post,
+      post: post,
     })
   })
 }

@@ -2,15 +2,9 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 
-const replySchema = new Schema({
-  name: String,
-  content: String,
-},{
-  timestamps: true
-})
 
 const postSchema = new mongoose.Schema({
-  name: {type: mongoose.Schema.Types.ObjectId, ref:'Profile'},
+  profile: {type: mongoose.Schema.Types.ObjectId, ref:'Profile'},
   content: String,
 }, {
   timestamps: true
