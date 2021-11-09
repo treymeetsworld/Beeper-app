@@ -7,7 +7,10 @@
   <title>Document</title>
 </head>
 <body>
-
   <%= post.content %> 
+  <form action="/posts/<%= post._id %>?_method=PUT"  method="POST" class="post-form">
+    <input type="text" name="content" placeholder="update">
+    <button type="submit">New Content</button>
+  </form>
 </body>
-</html>
+</html>                   

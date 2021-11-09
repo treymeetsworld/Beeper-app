@@ -29,11 +29,18 @@ function show(req,res){
       post,
     })
   })
-}
+}                               
+function update(req,res){
+  Post.findByIdAndUpdate(req.params.id , req.body, function(error,post){
+    res.redirect('/posts')
+  })
+  }
+
 
 export{
   index,
   create,
   newPost as new,
   show,
+  update,
 }
