@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title><%= title %></title>
+    
     <div class="header-div">
       <h1 class="header">BEEPER</h1>
     </div>
@@ -15,7 +15,7 @@
         <div class="logo"><img src="/public/images/pager_favicon/android-chrome-192x192.png" alt="">
         </div>
         <ul class="nav-ul">
-          <li class="home"><a href="/auth/logout">
+          <li class="home"><a href="/">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pager" class="svg-inline--fa fa-pager fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M448 64H64a64 64 0 0 0-64 64v256a64 64 0 0 0 64 64h384a64 64 0 0 0 64-64V128a64 64 0 0 0-64-64zM160 368H80a16 16 0 0 1-16-16v-16a16 16 0 0 1 16-16h80zm128-16a16 16 0 0 1-16 16h-80v-48h80a16 16 0 0 1 16 16zm160-128a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32v-64a32 32 0 0 1 32-32h320a32 32 0 0 1 32 32z"></path></svg>
             <span>Home</span>
             <li><a href="/auth/logout">
@@ -49,9 +49,13 @@
       </nav>
       <main>
         <section class="section-1">
-            <div>
-              
-            </div>
+          <div>              
+            <% posts.forEach(p => { %>
+              <div>
+                <%= p.name %>
+                <%= p.content %>
+                <% }) %> 
+                </div>
         </section>
       </main>
       <form

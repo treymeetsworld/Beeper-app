@@ -8,6 +8,9 @@
 
 .siwg-link {
   display: inline-block;
+  position: relative;
+  top: 20rem;
+  right: 40px;
 }
 
 .siwg:focus,
@@ -40,10 +43,3 @@
   position: absolute;
   width: 1px; 
 }
-/* h1::before{
-  content: '';
-  background: url(/images/pager_favicon/android-chrome-192x192.png);
-  width: 192px;
-  height: 192px;
-  display: block;
-} */

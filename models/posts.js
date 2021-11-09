@@ -12,7 +12,6 @@ const replySchema = new Schema({
 const postSchema = new mongoose.Schema({
   name: {type: mongoose.Schema.Types.ObjectId, ref:'Profile'},
   content: String,
-  replies: [replySchema]
 }, {
   timestamps: true
 })
