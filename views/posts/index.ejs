@@ -58,7 +58,11 @@
             <li>
               <%= post.profile %> 
               <%= post.content %> 
-              <a href="/posts/<%= post._id %>">💬</a>
+              <a href="/posts/<%= post._id %>">...</a>
+              <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+                <button type="submit">X
+                </button>
+              </form>
             </li>
               <% }) %>
           </div>

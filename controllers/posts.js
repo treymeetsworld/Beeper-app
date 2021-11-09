@@ -36,6 +36,11 @@ function update(req,res){
   })
   }
 
+  function deletePost(req,res){
+    Post.findByIdAndDelete(req.params.id, function(err,post){
+      res.redirect('/posts')
+    })
+  }
 
 export{
   index,
@@ -43,4 +48,5 @@ export{
   newPost as new,
   show,
   update,
+  deletePost as delete,
 }
