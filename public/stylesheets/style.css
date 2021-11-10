@@ -108,11 +108,34 @@ h1 {
   height: 96px;
   width: 96px;
 }
+.post-box{
+ width: 100%;
+ height: 75px;
+}
 .post-box li{
   font-size: 2.5rem;
   list-style: none;
-  height: 75px;
-  width: 476px;
   background-color: bisque;
   margin: 2px;
+  display: grid;
+  justify-content: space-between;
+  justify-items: end;
+  align-items: end;
+  grid-template-areas: "img p .. ..  button"
+                       "img .. a .. form";
+  grid-template-columns: auto 42px 1fr 30px 30px;
+  grid-template-rows: max-content;
+}
+.post-content{
+  justify-self:normal;
+  align-self: end;
+  margin: 0;
+}
+.author{
+ font-size: 1rem;
+ align-self: flex-start;
+}
+
+.del-form{
+  align-self: flex-start;
 }

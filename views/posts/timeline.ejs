@@ -27,10 +27,16 @@
       <% posts.forEach(post => { %>
         <div class="post-box">
           <li>
-            <%= post.profile %> 
-            <%= post.content %> 
-            <a href="/posts/<%= post._id %>">...</a>
-            <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+            <% if (user?.profile.avatar) { %>
+                <img 
+                  src="<%= user.profile.avatar %>" 
+                  alt="<%= user.profile.name %> avatar"
+                class="profile-image">
+                <% } %> 
+                <p class="author"><%= user.profile.name %> </p>
+           <p class="post-content"> <%= post.content %></p>
+            <a href="/posts/<%= post._id %>" class="post-id">...</a>
+            <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" class="del-form">
               <button type="submit">X
               </button>
             </form>
