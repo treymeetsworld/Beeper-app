@@ -11,6 +11,16 @@ function index(req,res){
     })
   })
 }
+function timeline(req,res){
+  Post.find({},function(error,posts){
+    res.render('posts/timeline',{
+     posts,
+     error,
+     title: 'Timeline',
+     user: req.user ? req.user : null 
+    })
+  })
+}
 function newPost(req,res){
   res.render('posts/new')
 }
@@ -49,4 +59,5 @@ export{
   show,
   update,
   deletePost as delete,
+  timeline,
 }
