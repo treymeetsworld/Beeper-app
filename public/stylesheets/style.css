@@ -26,9 +26,8 @@ head{
     top:0;
     width:100%;
     z-index:100;
-    background: #551a8b;
+    background-color: #DCEEFB;
 }
-
 .header{
   display: flex;
   justify-content: center;
@@ -41,7 +40,7 @@ head{
   background: url(/public/images/pager_favicon/android-chrome-192x192.png);
 }
 .navbar {
-  background-color: aquamarine;
+  background-color: #DCEEFB;
   font-size: 1.6rem;
   height: 100vh;
   width: 10rem;
@@ -61,15 +60,7 @@ head{
   margin-top: auto;
 }
 body {
-  background: hsla(270, 98%, 60%, 1);
-
-  background: linear-gradient(180deg, hsla(270, 98%, 60%, 1) 33%, hsla(164, 100%, 47%, 1) 100%);
-  
-  background: -moz-linear-gradient(180deg, hsla(270, 98%, 60%, 1) 33%, hsla(164, 100%, 47%, 1) 100%);
-  
-  background: -webkit-linear-gradient(180deg, hsla(270, 98%, 60%, 1) 33%, hsla(164, 100%, 47%, 1) 100%);
-  
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9835FD", endColorstr="#00EEAD", GradientType=1 );
+/* background-color: #DCEEFB; */
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -92,14 +83,14 @@ h1 {
 .section-1{
   width: 50%;
   height: 100vw;
-  background-color: aquamarine;
+  background-color: #DCEEFB;
   margin-left: 5px;
   margin-top: 9rem;
 }
 .section-2{
   width: 50%;
   height: 100vw;
-  background-color: aquamarine;
+  background-color: #DCEEFB;
   margin-left: 5px;
   margin-top: 9rem;
 }
@@ -109,14 +100,14 @@ h1 {
   width: 96px;
 }
 .post-box{
- width: 100%;
- height: 75px;
- word-break: break-word;
+  width: 100%;
+  height: 75px;
+  word-break: break-word;
 }
 .post-box li{
   font-size: 2.5rem;
   list-style: none;
-  background-color: bisque;
+  background-color:  #3C86AC;
   margin: 2px;
   display: grid;
   justify-content: space-between;
@@ -139,4 +130,33 @@ h1 {
 
 .del-form{
   align-self: flex-start;
+}
+
+
+.curve{
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
+}
+.curve ::before{
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: aquamarine;
+  transform: translate(85%, 60%);
+}
+.curve ::after{
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: cadetblue;
+  transform: translate(-4%, 40%);
+  z-index: -1;
 }
