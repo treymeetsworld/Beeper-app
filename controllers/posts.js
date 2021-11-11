@@ -14,10 +14,10 @@ function index(req,res){
 function timeline(req,res){
   Post.find({},function(error,posts){
     res.render('posts/timeline',{
-     posts,
-     error,
-     title: 'Timeline',
-     user: req.user ? req.user : null 
+    posts,
+    error,
+    title: 'Timeline',
+    user: req.user ? req.user : null 
     })
   })
 }
@@ -52,6 +52,15 @@ function update(req,res){
     })
   }
 
+function createReply(req,res){
+  Post.findById(req.params.id, function(err,post){
+    post.replies.push(req.body)
+    post.save(function(err){
+      res.redirect(`/posts/${post._id}`)
+    })
+  })
+}
+
 export{
   index,
   create,
@@ -60,4 +69,5 @@ export{
   update,
   deletePost as delete,
   timeline,
+  createReply,
 }

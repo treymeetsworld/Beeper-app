@@ -9,6 +9,7 @@ router.post('/', postsCtrl.create)
 router.get('/:id', postsCtrl.show)
 router.put('/:id', postsCtrl.update)
 router.delete('/:id', postsCtrl.delete)
+router.post('/:id/replies', postsCtrl.createReply)
 
 
 export {
