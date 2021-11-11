@@ -52,6 +52,12 @@
   </nav>
   <main>
     <div class="edit-post">
+      <% if (user?.profile.avatar) { %>
+        <img 
+          src="<%= user.profile.avatar %>" 
+          alt="<%= user.profile.name %> avatar"
+        class="profile-image">
+        <% } %> 
       <p>
         <%= post.content %> 
       </p>
@@ -64,6 +70,12 @@
       <section class="replies-section">
         <% post.replies.forEach(reply => { %>
           <div class="reply-div">
+            <% if (user?.profile.avatar) { %>
+              <img 
+                src="<%= user.profile.avatar %>" 
+                alt="<%= user.profile.name %> avatar"
+              class="profile-image">
+              <% } %> 
             <p>
               <%= reply.content %> 
             </p>
@@ -81,3 +93,4 @@
   </main>
 </body>
 </html> 
+
