@@ -62,13 +62,9 @@
     </div>
     <% if (post.replies.length) { %>
     <section class="replies-section">
-      <% post.replies.foreach(function(reply){ %>
-        <div class="reply-div">
-          <p>
-            <%= post.reply %> 
-          </p>
-        </div>
-     <% }) %> 
+      <div class="replies-div">
+        <%= post.replies.content %> 
+      </div>
     </section>
     <% } else { %>
       <h3>No Replies Yet</h3>
