@@ -61,17 +61,20 @@
       </form>
     </div>
     <% if (post.replies.length) { %>
-    <section class="replies-section">
-      <div class="replies-div">
-        <%= post.replies.content %> 
-      </div>
-    </section>
+      <section class="replies-section">
+        <% post.replies.forEach(reply => { %>
+          <div class="reply-div">
+            <p>
+              <%= reply.content %> 
+            </p>
+          </div>
+        <% }) %>
     <% } else { %>
       <h3>No Replies Yet</h3>
     <% } %>
     <div class="comment">
       <form action="/posts/<%= post._id %>/replies"  method="POST" class="reply-form">
-        <input type="text" name="replies" placeholder="Reply">
+        <input type="text" name="content" placeholder="Reply">
         <button type="submit">Reply</button>
       </form>
     </div>
