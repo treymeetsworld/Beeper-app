@@ -35,21 +35,22 @@
         <section class="index-section-1">
           <% posts.forEach(post => { %>
           <div class="index-post-box">
-            <li class="index-li">
-              
+            <li class="index-li">   
       <% if (user?.profile.avatar) { %>
         <img 
           src="<%= user.profile.avatar %>" 
           alt="<%= user.profile.name %> avatar"
         class="profile-image">
+        <p class="author"><%= user.profile.name %></p>
         <% } %> 
-        <p class="author"><%= user.profile.name %> </p>
-  <p class="post-content"> <%= post.content %></p>
-    <a href="/posts/<%= post._id %>" class="post-id">...</a>
-    <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" class="del-form">
-      <button type="submit">X
-      </button>
-    </form>
+        <p class="post-content"> <%= post.content %></p>
+          <a href="/posts/<%= post._id %>" class="post-id">...</a>
+          <% if (user?.profile) { %>
+          <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" class="del-form">
+            <button type="submit">X
+            </button>
+          </form>
+          <% } %> 
             </li>
               <% }) %>
         </section>
