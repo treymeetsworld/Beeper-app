@@ -53,7 +53,7 @@
         <% } %> 
       <p class="post-content"> <%= post.content %></p>
         <a href="/posts/<%= post._id %>" class="post-id">...</a>
-        <% if (user?.profile) { %>
+        <% if (user) { %>
         <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" class="del-form">
           <button type="submit">X
           </button>
