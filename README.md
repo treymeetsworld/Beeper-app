@@ -14,6 +14,7 @@
 
 ![Timeline](public/images/assets/timeline_page.png)
 ![Final-Look](public/images/assets/Final-look.png)
+[Planning-Materials](https://trello.com/b/duM1M0Ee/beeper-board)
 
 [Join the party](https://beeper-social.herokuapp.com/)
 ***
