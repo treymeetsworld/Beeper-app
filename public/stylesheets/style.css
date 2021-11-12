@@ -73,7 +73,7 @@ body {
 main {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
   margin-left: 10rem;
   height: 100%;
@@ -136,7 +136,7 @@ h1 {
 }
 
 .edit-post {
-  height: 200px;
+  height: auto;
   width: 350px;
   background: darkorchid;
   box-shadow: brown;

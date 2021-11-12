@@ -55,7 +55,13 @@
           <% posts.forEach(post => { %>
           <div class="post-box">
             <li>
-              <%= post.profile %> 
+              <% if (user?.profile.avatar) { %>
+                <img 
+                  src="<%= user.profile.avatar %>" 
+                  alt="<%= user.profile.name %> avatar"
+                class="profile-image">
+                <% } %> 
+              <%= user.profile.name %> 
               <%= post.content %> 
               <a href="/posts/<%= post._id %>">...</a>
               <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
