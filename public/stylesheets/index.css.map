@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,IAAI,CAAA;EACF,gBAAgB,EAAE,MAAM;CACzB",
+    "sources": [
+        "index.scss",
+        "sass/3-layouts/_profile.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}

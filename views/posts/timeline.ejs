@@ -1,53 +1,49 @@
 <%- include('../partials/html-head') %>
-<%- include('../partials/nav') %>
+  <%- include('../partials/nav') %>
 
-<main>
-  <% if (!user) { %>
-  <a href="/auth/google" class="siwg-link">
-    <button type="submit" class="siwg">
-      <img id="siwg-image" alt="Sign in with Google" />
-    </button>
-    <% } %>
-  </a>
-  <% if (user) { %>
-  <section class="section-1">
-    <% if (user?.profile.avatar) { %>
-      <div>
-        <img 
-          src="<%= user.profile.avatar %>" 
-          alt="<%= user.profile.name %> avatar"
-        >
-        <form action="/posts" method="POST" class="post-form">
-          <input type="text" name="content">
-          <button type="submit">New Post</button>
-        </form>
-      </div>
-    <% } %> 
-  </section>
-  <section class="section-2">
-  </div>
-  <% posts.forEach(post => { %>
-    <div class="post-box">
-      <li>
-        <% if (user?.profile.avatar) { %>
-            <img 
-              src="<%= user.profile.avatar %>" 
-              alt="<%= user.profile.name %> avatar"
-            class="profile-image">
-            <% } %> 
-            <p class="author"><%= user.profile.name %> </p>
-      <p class="post-content"> <%= post.content %></p>
-        <a href="/posts/<%= post._id %>" class="post-id">...</a>
-        <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" class="del-form">
-          <button type="submit">X
+    <main>
+      <% if (!user) { %>
+        <a href="/auth/google" class="siwg-link">
+          <button type="submit" class="siwg">
+            <img id="siwg-image" alt="Sign in with Google" />
           </button>
-        </form>
-      </li>
-        <% }) %>
-    </div>
-      </div>
-  </section>
-</main>
-<form
-<% } %>
-<%- include('../partials/footer') %>
+          <% } %>
+        </a>
+        <% if (user) { %>
+          <section class="section-1">
+            <% if (user?.profile.avatar) { %>
+              <div>
+                <img src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar">
+                <form action="/timeline" method="POST" class="post-form">
+                  <input type="text" name="content">
+                  <button type="submit">New Post</button>
+                </form>
+              </div>
+              <% } %>
+          </section>
+          <section class="section-2">
+            <% posts.forEach(post=> { %>
+              <div class="post-box">
+                <li>
+                  <% if (user?.profile.avatar) { %>
+                    <img src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar" class="profile-image">
+                    <% } %>
+                      <p class="author">
+                        <%= user.profile.name %>
+                      </p>
+                      <p class="post-content">
+                        <%= post.content %>
+                      </p>
+                      <a href="/posts/<%= post._id %>" class="post-id">...</a>
+                      <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" class="del-form">
+                        <button type="submit">X
+                        </button>
+                      </form>
+                </li>
+                <% }) %>
+              </div>
+              </div>
+          </section>
+    </main>
+    <% } %>
+      <%- include('../partials/footer') %>

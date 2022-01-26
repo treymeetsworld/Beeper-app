@@ -31,16 +31,6 @@ body{
   top: 0;
   background-color: bisque;
 }
-/* nav.show-navbar {
-  display: flex;
-  justify-self: start;
-  position: fixed;
-  background: aquamarine;
-  height: -webkit-fill-available;
+.main-index{
+  margin: 1px;
 }
-main.main-show {
-  display: grid;
-  justify-content: start;
-  margin-left: 95px;
-  margin-top: 95px;
-} */
