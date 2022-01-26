@@ -14,7 +14,7 @@
             <% if (user?.profile.avatar) { %>
               <div>
                 <img src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar">
-                <form action="/timeline" method="POST" class="post-form">
+                <form action="/posts" method="POST" class="post-form">
                   <input type="text" name="content">
                   <button type="submit">New Post</button>
                 </form>

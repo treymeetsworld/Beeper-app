@@ -1,0 +1,20 @@
+nav{
+  margin-top: auto;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  height: 90px;
+  background-color: burlywood;
+    ul{
+      list-style: none;
+      display: flex;
+        li{
+          margin: 5px;
+          min-width: 50px;
+        }
+    }
+}
+
+.nav-list::last-child{
+  margin-top: auto;
+}
