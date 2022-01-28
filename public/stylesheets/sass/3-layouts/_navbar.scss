@@ -1,13 +1,18 @@
 nav{
   margin-top: auto;
   bottom: 0;
-  width: 100%;
-  position: absolute;
+  width:inherit;
+  position: fixed;
   height: 90px;
   background-color: burlywood;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
     ul{
       list-style: none;
       display: flex;
+      justify-content: space-around;
+      padding: 0;
+      margin: 0;
         li{
           margin: 5px;
           min-width: 50px;

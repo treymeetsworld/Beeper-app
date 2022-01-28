@@ -33,6 +33,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .container-box {
@@ -42,7 +43,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 30px;
   overflow-y: hidden;
-  border-bottom: 90px;
 }
 
 .container-box:hover {
@@ -56,10 +56,12 @@ header {
 nav {
   margin-top: auto;
   bottom: 0;
-  width: 100%;
-  position: absolute;
+  width: inherit;
+  position: fixed;
   height: 90px;
   background-color: burlywood;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 nav ul {
@@ -67,6 +69,10 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {

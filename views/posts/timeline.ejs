@@ -23,8 +23,8 @@
           </section>
           <section class="section-2">
             <% posts.forEach(post=> { %>
-              <div class="post-box">
-                <li>
+              <li>
+                <div class="post-box">
                   <% if (user?.profile.avatar) { %>
                     <img src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar" class="profile-image">
                     <% } %>
@@ -39,10 +39,9 @@
                         <button type="submit">X
                         </button>
                       </form>
-                </li>
-                <% }) %>
-              </div>
-              </div>
+                </div>
+              </li>
+              <% }) %>
           </section>
     </main>
     <% } %>
