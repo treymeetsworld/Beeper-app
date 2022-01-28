@@ -3,14 +3,13 @@
 
 @import './sass/2-base/global';
 
-@import './sass/3-layouts/navbar';
-// @import './sass//3-layouts/landing-page';
-// @import './sass//3-layouts/signup-login';
-// @import './sass/3-layouts/profile';
-
-// @import './sass//4-components/form';
-// @import './sass/4-components/nav';
+@import './sass//3-layouts/index';
+@import './sass//3-layouts/post-index';
 @import './sass/3-layouts/timeline';
+@import './sass/3-layouts/siwg';
+
+@import './sass/4-components/navbar';
+
 
 
 

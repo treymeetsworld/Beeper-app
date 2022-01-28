@@ -10,7 +10,8 @@
   display: inline-block;
   position: relative;
   top: 20rem;
-  right: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .siwg:focus,

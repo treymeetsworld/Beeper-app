@@ -10,22 +10,18 @@
     <% } %>
   </a>
   <% if (user) { %>
-  <section class="section-1">
-    <% if (user?.profile.avatar) { %>
-      <div>
+  <section class="section-home">
+    <% if (user?.profile) { %>
+      <div class="profile">
+        <p><%= user.profile.name %></p>
         <img 
           src="<%= user.profile.avatar %>" 
           alt="<%= user.profile.name %> avatar"
         >
-        <form action="/posts" method="POST" class="post-form">
-          <input type="text" name="content">
-          <button type="submit">New Post</button>
-        </form>
       </div>
     <% } %> 
       </div>
   </section>
-  <section class="section-2">
   </section>
 </main>
 <form

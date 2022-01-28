@@ -53,6 +53,147 @@ header {
   text-align: center;
 }
 
+li {
+  display: block;
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body {
+  background-color: bisque;
+}
+
+.post-box {
+  border: 1px solid #ccc;
+  word-break: break-word;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.post-content {
+  margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.author {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0;
+  width: 7ch;
+  word-break: initial;
+}
+
+.del-form {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.siwg {
+  background: url(/images/auth/google/siwg_light_normal.png);
+  cursor: pointer;
+  border: none;
+  width: 191px;
+  height: 46px;
+}
+
+.siwg-link {
+  display: inline-block;
+  position: relative;
+  top: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.siwg:focus,
+.siwg-link:focus {
+  background: url(/images/auth/google/siwg_light_focus.png);
+  outline: none;
+}
+
+.siwg:active {
+  background: url(/images/auth/google/siwg_light_pressed.png);
+}
+
+/* This pre-loads the siwg focus and active buttons */
+.siwg::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url(/images/auth/google/siwg_light_pressed.png) url(/images/auth/google/siwg_light_focus.png);
+}
+
+/* This hides the siwg alt text and broken image icon */
+#siwg-image {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.curve {
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
+}
+
+.curve ::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: aquamarine;
+  -webkit-transform: translate(85%, 60%);
+          transform: translate(85%, 60%);
+}
+
+.curve ::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: cadetblue;
+  -webkit-transform: translate(-4%, 40%);
+          transform: translate(-4%, 40%);
+  z-index: -1;
+}
+
 nav {
   margin-top: auto;
   bottom: 0;
@@ -76,15 +217,8 @@ nav ul {
 }
 
 nav ul li {
+  list-style: none;
   margin: 5px;
   min-width: 50px;
-}
-
-.nav-list::last-child {
-  margin-top: auto;
-}
-
-body {
-  background-color: bisque;
 }
 /*# sourceMappingURL=index.css.map */

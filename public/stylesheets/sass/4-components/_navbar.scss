@@ -14,12 +14,9 @@ nav{
       padding: 0;
       margin: 0;
         li{
+          list-style: none;
           margin: 5px;
           min-width: 50px;
         }
     }
-}
-
-.nav-list::last-child{
-  margin-top: auto;
 }

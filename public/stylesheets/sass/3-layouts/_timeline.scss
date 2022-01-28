@@ -1,3 +1,23 @@
 body{
   background-color: bisque;
 }
+.post-box{
+  border: 1px solid #ccc;
+  word-break: break-word;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.post-content{
+  margin: 0;
+  flex-grow: 1;
+} 
+.author{
+  align-self: flex-start;
+  margin: 0;
+  width: 7ch;
+  word-break: initial;
+}
+.del-form{
+  align-self: flex-start;
+}
